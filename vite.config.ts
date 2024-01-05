@@ -9,6 +9,10 @@ export default defineConfig({
         target: "https://open-ai-chat-app-server.vercel.app",
         changeOrigin: true,
       },
+      "/api": {
+        target: "https://open-ai-chat-app-server.vercel.app",
+        changeOrigin: true,
+      },
     },
   },
   plugins: [react()],
