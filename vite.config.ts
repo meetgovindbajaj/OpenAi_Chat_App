@@ -8,10 +8,7 @@ export default defineConfig({
       "/api/v1": {
         target: "https://open-ai-chat-app-server.vercel.app",
         changeOrigin: true,
-      },
-      "/api": {
-        target: "https://open-ai-chat-app-server.vercel.app",
-        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/v1/, ""),
       },
     },
   },
