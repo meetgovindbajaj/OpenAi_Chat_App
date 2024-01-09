@@ -12,10 +12,10 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  test: {
-    environment: "jsdom",
-    setupFiles: ["./test/setup.ts"],
-    testMatch: ["./test/**/*.test.tsx"],
-    globals: true,
-  },
+  // test: {
+  //   environment: "jsdom",
+  //   setupFiles: ["./test/setup.ts"],
+  //   testMatch: ["./test/**/*.test.tsx"],
+  //   globals: true,
+  // },
 });
