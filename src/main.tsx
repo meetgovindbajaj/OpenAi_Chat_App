@@ -15,7 +15,9 @@ axios.defaults.withCredentials = true;
 const theme = createTheme({
   typography: {
     fontFamily: "Montserrat, sans-serif",
-    allVariants: { color: "white" },
+    allVariants: {
+      color: "white",
+    },
   },
 });
 
