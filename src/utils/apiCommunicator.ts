@@ -4,6 +4,7 @@ export const loginUser = async (email: string, password: string) => {
   const res = await axios.post("/user/signin", { email, password });
   const data = await res.data;
   if (res.status !== 200) throw new Error(data.cause);
+  console.log(data);
   document.cookie = data.Cookie_Name + "=" + data.token + ";" + data.expires;
   return data;
 };
@@ -16,6 +17,7 @@ export const signupUser = async (
   const res = await axios.post("/user/signup", { name, email, password });
   const data = await res.data;
   if (res.status !== 201) throw new Error(data.cause);
+  console.log(data);
   document.cookie = data.Cookie_Name + "=" + data.token + ";" + data.expires;
   return data;
 };
