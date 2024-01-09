@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer role="footer">
       <div
         style={{
           width: "100%",

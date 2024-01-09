@@ -18,6 +18,7 @@ const Logo = () => {
           width={"30px"}
           height={"30px"}
           className="image__inverted"
+          role="img"
         />
       </Link>
       <Typography

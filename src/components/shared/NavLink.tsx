@@ -15,6 +15,7 @@ const NavLink = ({ to, text, bg, textColor, onClick }: Props) => {
       style={{ background: bg, color: textColor }}
       onClick={onClick}
       className="nav__link"
+      role="link"
     >
       {text}
     </Link>

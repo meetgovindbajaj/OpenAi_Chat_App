@@ -24,10 +24,11 @@ const Chat = () => {
     const fd = new FormData(e.currentTarget);
     const message = fd.get("message") as string;
     try {
-      auth?.setChatMessages((prevChatMessages) => [
-        ...prevChatMessages,
-        { _id: new Date().toDateString(), content: message, role: "user" },
-      ]);
+      if (auth?.setChatMessages)
+        auth?.setChatMessages((prevChatMessages) => [
+          ...prevChatMessages,
+          { _id: new Date().toDateString(), content: message, role: "user" },
+        ]);
       toast.loading("Sending message...", { id: "sendChat" });
       if (boxRef) scrollToRef(boxRef, 100);
       await auth?.sendChat(message);
